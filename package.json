@@ -6,6 +6,15 @@
   "author": "4leaf-SH",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "express": "^4.16.4",
+    "@babel/preset-env": "^7.6.2"
+  },
+  "scripts": {
+    "start": "nodemon --exec babel-node index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
   }
 }
