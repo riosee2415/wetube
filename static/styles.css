@@ -152,6 +152,18 @@ main {
   margin: 0 auto;
   min-height: 70vh; }
 
+@-webkit-keyframes header_fonthover {
+  0% {
+    font-size: 14px; }
+  100% {
+    font-size: 15px; } }
+
+@keyframes header_fonthover {
+  0% {
+    font-size: 14px; }
+  100% {
+    font-size: 15px; } }
+
 .header {
   background: linear-gradient(#e1eec3, #f05053);
   margin-bottom: 50px; }
@@ -179,6 +191,9 @@ main {
       .header .header__wrapper .header__column ul a {
         text-decoration: none;
         color: white; }
+        .header .header__wrapper .header__column ul a:hover {
+          -webkit-animation: header_fonthover 0.7s infinite;
+                  animation: header_fonthover 0.7s infinite; }
       .header .header__wrapper .header__column ul li:not(:last-child) {
         margin-right: 15px; }
     .header .header__wrapper .header__column form {

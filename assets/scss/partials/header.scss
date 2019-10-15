@@ -1,3 +1,12 @@
+@keyframes header_fonthover {
+  0% {
+    font-size: 14px;
+  }
+  100% {
+    font-size: 15px;
+  }
+}
+
 .header {
   //   background-color: $red;
   background: linear-gradient(#e1eec3, #f05053);
@@ -26,6 +35,9 @@
         a {
           text-decoration: none;
           color: white;
+          &:hover {
+            animation: header_fonthover 0.7s infinite;
+          }
         }
         display: flex;
         color: white;
