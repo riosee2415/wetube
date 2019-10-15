@@ -101,7 +101,5 @@ public
 .tern-port
 
 package-lock.json
-
 uploads
-
 static
