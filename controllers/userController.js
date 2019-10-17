@@ -21,7 +21,6 @@ export const postJoin = async (req, res, next) => {
         email
       });
       await User.register(user, password);
-      console.log("Complate Register User");
       next();
     } catch (error) {
       console.log(error);
@@ -69,6 +68,21 @@ export const postGithubLogin = (req, res) => {
   res.redirect(routes.home);
 };
 
+export const facebookLogin = passport.authenticate("facebook");
+
+export const facebookLoginCallback = (
+  accessToken,
+  refreshToken,
+  profile,
+  cb
+) => {
+  console.log(accessToken, refreshToken, profile, cb);
+};
+
+export const postFacebookLogin = (req, res) => {
+  res.redirect(routes.home);
+};
+
 export const logout = (req, res) => {
   req.logout();
   res.redirect(routes.home);
@@ -80,8 +94,19 @@ export const getMe = (req, res) => {
   res.render("userDetail", { pageTitle: "UserDetail", user: req.user });
 };
 
-export const userDetail = (req, res) => {
-  res.render("userDetail", { pageTitle: "UserDetail" });
+export const userDetail = async (req, res) => {
+  const {
+    params: { id }
+  } = req;
+
+  console.log(id);
+
+  try {
+    const user = await User.findById(id);
+    res.render("userDetail", { pageTitle: "UserDetail" }, user);
+  } catch (error) {
+    res.redirect(routes.home);
+  }
 };
 
 export const editProfile = (req, res) =>
