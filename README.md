@@ -24,7 +24,7 @@ Cloning Youtube with Vanilla and NodeJS
 - [x] Video Delete
 - [x] Video View
 
-## Security
+## Security:
 
 - [x] Only Public
 - [x] Only Private
