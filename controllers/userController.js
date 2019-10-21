@@ -114,12 +114,9 @@ export const userDetail = async (req, res) => {
   const {
     params: { id }
   } = req;
-
-  console.log(id);
-
   try {
     const user = await User.findById(id);
-    res.render("userDetail", { pageTitle: "UserDetail" }, user);
+    res.render("userDetail", { pageTitle: "UserDetail", user });
   } catch (error) {
     res.redirect(routes.home);
   }
