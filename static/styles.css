@@ -357,6 +357,7 @@ button.delete {
   .videoPlayer:hover .videoPlayer__constrols {
     opacity: 1; }
   .videoPlayer video {
+    width: 100%;
     min-width: 100%; }
   .videoPlayer .videoPlayer__constrols {
     opacity: 0;
