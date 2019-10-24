@@ -415,7 +415,7 @@ button.delete {
   .record-container video {
     background-color: #444444;
     width: 100%;
-    margin-bottom: 20px; }
+    margin-bottom: 10px; }
 
 .home-videos {
   display: grid;
