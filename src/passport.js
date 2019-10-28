@@ -15,7 +15,7 @@ passport.use(
     {
       clientID: process.env.GH_ID,
       clientSecret: process.env.GH_SECRET,
-      callbackURL: `http://localhost:4000${routes.githbCallback}`
+      callbackURL: `https://radiant-tor-44495.herokuapp.com${routes.githbCallback}`
     },
     githubLoginCallback
   )
@@ -26,7 +26,7 @@ passport.use(
     {
       clientID: process.env.FB_ID,
       clientSecret: process.env.FB_SECRET,
-      callbackURL: `https://itchy-snail-5.localtunnel.me${routes.facebookCallback}`,
+      callbackURL: `https://radiant-tor-44495.herokuapp.com${routes.facebookCallback}`,
       profileFields: ["id", "displayName", "photos", "email"],
       scope: ["public_profile", "email"]
     },
