@@ -55,6 +55,10 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/polyfill": "^7.6.0",
+    "@babel/preset-env": "^7.6.2",
     "eslint": "^6.5.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-import": "^0.13.0",
